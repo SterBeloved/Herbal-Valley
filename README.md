@@ -54,7 +54,7 @@ A tiny collection of botanical knowledge, made for curious explorers.
 
 ## 🎮 Play the Game
 
-🌿 **[Enter Herbal Valley](YOUR_GITHUB_PAGES_LINK)**
+🌿 **[Enter Herbal Valley](https://sterbeloved.github.io/Herbal-Valley/)**
 
 *Best experienced on a desktop browser with sound enabled.*
 
