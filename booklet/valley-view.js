@@ -1,0 +1,4 @@
+(() => {
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+window.renderValley=start=>`${start===0?'<h1>The Valley</h1>':'<div class="chapter-heading-space" aria-hidden="true"></div>'}<p class="valley-context">Game collection locations</p><div class="valley-regions">${window.FIELD_GUIDE_DATA.regions.slice(start,start+3).map(r=>`<section class="valley-region" aria-label="${esc(r.name)}"><div class="valley-location"><img src="${esc(r.image)}" alt="${esc(r.name)} region from the game map"><h2>${esc(r.name)}</h2></div><div class="valley-materials" style="--herb-count:${r.materialIds.length}" aria-label="Materials collected in ${esc(r.name)}">${r.materialIds.map(id=>{const m=window.FIELD_GUIDE_DATA.materials.find(m=>m.id===id);return `<span class="valley-herb"><img src="${esc(m.image)}" alt="${esc(m.nameZh)} ${esc(m.name)}"></span>`}).join('')}</div></section>`).join('')}</div>`;
+})();
